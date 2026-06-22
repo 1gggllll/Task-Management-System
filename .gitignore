@@ -1,0 +1,82 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Production
+build/
+dist/
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
+
+# Database
+*.db
+*.sqlite
+
+# Prisma
+server/prisma/migrations/
+
+# TypeScript
+*.tsbuildinfo
+
+# Vite
+client/.vite/
+
+# Testing
+server/coverage/
+client/coverage/
+
+# Misc
+*.pem
+*.key
+*.cert
+
+# 本地文档（不需要提交到远程）
+agent.md
+git操作手册.md
+项目开发手册.md
+
+# 日志文件
+logs/
+*.log
+
+# 缓存
+.cache/
+.tmp/
+
+# 编辑器配置
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 临时文件
+*.tmp
+*.temp
