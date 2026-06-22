@@ -305,12 +305,6 @@ docker-compose build
 docker-compose up -d
 ```
 
-## 相关文档
-- [项目开发手册](./项目开发手册.md) - 分阶段开发计划
-- [Git操作手册](./git操作手册.md) - Git操作规范
-- [API文档](./docs/api.md) - 详细API文档
-- [数据库设计](./docs/database.md) - 数据库设计文档
-
 ## 贡献指南
 1. Fork项目
 2. 创建功能分支：`git checkout -b feature/your-feature`
