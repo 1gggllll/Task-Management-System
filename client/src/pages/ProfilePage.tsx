@@ -1,24 +1,20 @@
 import { Card, Form, Input, Button, Typography, Avatar, Upload, message } from 'antd';
 import { UserOutlined, UploadOutlined } from '@ant-design/icons';
 import { useAppDispatch, useAppSelector } from '../store';
-import { useState } from 'react';
+import { updateProfile } from '../features/auth/authSlice';
 
 const { Title } = Typography;
 
 const ProfilePage = () => {
   const dispatch = useAppDispatch();
-  const { user } = useAppSelector((state) => state.auth);
-  const [loading, setLoading] = useState(false);
+  const { user, loading } = useAppSelector((state) => state.auth);
 
   const onFinish = async (values: { name: string; avatar?: string }) => {
-    setLoading(true);
-    try {
-      // TODO: 实现更新用户信息
+    const result = await dispatch(updateProfile(values));
+    if (updateProfile.fulfilled.match(result)) {
       message.success('更新成功');
-    } catch (error) {
+    } else {
       message.error('更新失败');
-    } finally {
-      setLoading(false);
     }
   };
 
